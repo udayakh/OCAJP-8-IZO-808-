@@ -1,7 +1,7 @@
 # OCAJP-8-IZO-808-
 ##Random notes for IZO-808 exam concepts
 
- 1)After continue/break statement, we cannot write any statement directly inside loop, otherwise we will get compile time error saying unreachable statement. Here check braces carefully
+1. After continue/break statement, we cannot write any statement directly inside loop, otherwise we will get compile time error saying unreachable statement. Here check braces carefully
 2. It sorts numbers before letters and uppercase letters before lower case letters
 3. Arrays Class 	deepEquals(Object[] a1,Object a2[])
 4. When using throws, we can use superclass exception of the enclosing method exception, so here throws an IOException is legal.But it throws FileNotFoundException. So in the main method, catch block with FileNotFoundException executes.
