@@ -1,8 +1,8 @@
 # OCAJP-8-IZO-808-
 ##Random notes for IZO-808 exam concepts
 
-1. After continue/break statement, we cannot write any statement directly inside loop, otherwise we will get compile time error saying unreachable statement. Here check braces carefully
-2. It sorts numbers before letters and uppercase letters before lower case letters
+1. After continue/break statement, we cannot write any statement directly inside loop, otherwise we will get compile time error saying unreachable statement. Here check braces carefully.
+2. Collections.sort methods sorts numbers before letters and uppercase letters before lower case letters
 3. Arrays Class 	deepEquals(Object[] a1,Object a2[])
 4. When using throws, we can use superclass exception of the enclosing method exception, so here throws an IOException is legal.But it throws FileNotFoundException. So in the main method, catch block with FileNotFoundException executes.
 5. Method code throws a NullPOInterExc but the catch block for classcastexception can’t catch the nullpointerexcption. So final block is executed then control is return to the main method. NOTE: final block followed by runtimeExcetpion is not printed. Only final block thing will be printed.
