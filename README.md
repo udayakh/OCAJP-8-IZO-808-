@@ -18,5 +18,17 @@
 15. // text - The compiler ignores everything from // to the end of the line.
 16. Be clear with variable scope like method level, class level, instance level, 
 17. If we use a variable for the case, it needs to be a compile time constants.
-18. 
+18. StackOverflow,ArrayIndexOutOfBoundException thrown by JVM
+19. A fully qualified means using the completed package details when acessing java class.
+20. We can have methods with same name and same scope in the class.
+21. if your passing int literal to the method, but method expecting short literal, compiler will fail, to pass this you need to cast.(short)10.
+22. all the wrapper cllass are instaceof Object class.
+23. carefull with className/variable identifier, sometimes they will give as switch(java keywords)
+24. Before going to pre/post increment check var type.
+25. int a[]=new int[3]; now 3 elements set to zero.
+26. all good s/w design will go for high cohesion and low coupling
+27. -,+ are the unary operator
+28. while Overriding methods, we an't throw new or broader checked exceptions, but we can throw new or broader unchecked exception
+29. int x=10; static int y=x; will give compiletime error.static var can't access instance var value.
+30. 
 
