@@ -30,5 +30,45 @@
 27. -,+ are the unary operator
 28. while Overriding methods, we an't throw new or broader checked exceptions, but we can throw new or broader unchecked exception
 29. int x=10; static int y=x; will give compiletime error.static var can't access instance var value.
-30. 
-
+30. Integer class caches values between -128 to 127, when your comparing two interger with ==.
+    Short,Integer and Long from -128 to 127.
+31. int var will hava valeus from -2147483648 to 2147483647, if variable values reaches to min value, if you try to decremen it, it will shift to the max value.
+32. Wrapper(Integer) Increment will cause NullpointerException at runtime.
+33. We can't use any access modifier than public and default with top level classes.
+34. The enum constructor must be either private or package scope(default). you cannot use public or protected constructors for a java enum.
+35. || and && are called short circuiting operatiors bcz if, while evaluting a logical expression. at any stage, the value of the whole expression can be determined without evaluting the rest of the expression. then the remaining sub-expression are not evaluted.
+36.  public is least restrictive and private is most restrivctive
+37. Two dimensitonal array means it is basically an array of arrays.
+38. An instace member belongs to a single instance, not the class as a whole. an instance is a member variable or a memmber method that belongs to a specific object intance.
+39. A try statment must always have a catch associated with it.
+40 . All mathematical(%,...) operators evaluate all the operands
+41. ##Rules for a switch statement
+    Only String, byte, char, short, int, (and their wrapper classes Byte, Character, Short, and Integer), and enums can be used as types of a switch variable. String is allowed since Java 7.
+    
+    The case constants must be assignable to the switch variable. For example, if your switch variable is of class String, your case labels must use Strings as well.
+    The switch variable must be big enough to hold all the case constants. For example, if the switch variable is of type char, then none of the case constants can be greater than 65535 because a char's range is from 0 to 65535. For example, the following will not compile because 200 cannot be assigned to the variable b, which can only hold values from -128 to 127.
+    
+    byte b = 10;
+    switch(b){
+        case 100 : System.out.print(100); //OK
+        case 200 :  System.out.print(200); //will not compile
+    }
+    
+    All case labels should be COMPILE TIME CONSTANTS. This means, you can have literals such as 'a', 5, 10, or a final variable, the value of which is computed at compile time such as int I = 2*3; For example, the following is valid:
+    
+    int x = 10;
+    final int I = 2*3;
+    switch(x){ 
+       case I : System.out.println(x); 
+       //this is valid because I is a compile time constant
+    }
+    
+    No two of the case constant expressions associated with a switch statement may have the same value.
+    The default label is optional and at most one default label may be associated with the same switch statement.
+42. Abstract methods are meants to be overrirdent in the subclass.
+43 . ##Boolean
+    Boolean class has two constructors - Boolean(String) and Boolean(boolean)
+    Boolean class has two static helper methods for creating booleans - parseBoolean and valueOf.
+    Boolean.TRUE or Boolean.FALSE static members 
+    
+    
