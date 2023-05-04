@@ -3,22 +3,29 @@
 
 1. After continue/break statement, we cannot write any statement directly inside loop, otherwise we will get compile time error saying unreachable statement. Here check braces carefully.
 2. Collections.sort methods sorts numbers before letters and uppercase letters before lower case letters
-3. Arrays Class 	deepEquals(Object[] a1,Object a2[])
+3. Arrays Class have deepEquals(Object[] a1,Object a2[]) method
 4. When using throws, we can use superclass exception of the enclosing method exception, so here throws an IOException is legal.But it throws FileNotFoundException. So in the main method, catch block with FileNotFoundException executes.
+    public static void main(String[] args) throws FileNotFoundException {
+           //throw new IOException(); this line won't work, it should be handled like below
+            try {
+                           throw new IOException();
+            } catch (IOException e) {
+            }
+        }
 5. Method code throws a NullPOInterExc but the catch block for classcastexception can’t catch the nullpointerexcption. So final block is executed then control is return to the main method. NOTE: final block followed by runtimeExcetpion is not printed. Only final block thing will be printed.
-6. Method arguments and inside the method var reference should be different, if it’s same, we will get compile time error.
+6. In the Method overloading: Method arguments and inside the method var reference should be different, if it’s same, we will get compile time error.
 7. Loops careful with conditions and post/pre increments/decrements
 8. We can’t use a conditional clause with just else(true/false). for if(true/false) and else if(true/false)
 9. Read the question, before going for statement or answers
 10. Overriding methods can change the return type only within the bounds of covariant returns, it simply means that overririding methods can return a subtype of the return type of superclass.
 11. Java 8, static methods are allowed in the Interface
-12.  print() compile time error println() no compile error in the printStream class
-13.  int[2]={1,2,3} This code fails to compile due to an error at line 7, array constants can only be used in initializers. So we can’t use {1,2,3}.
+12.  Empty print method(System.out.print()) will cause compile time error println() no compile error in the printStream class
+13.  int[2]={1,2,3} This code fails to compile, array constants can only be used in initializers. So we can’t use {1,2,3}.
 14. /* text */ - The compiler ignores everything from /* to */
 15. // text - The compiler ignores everything from // to the end of the line.
 16. Be clear with variable scope like method level, class level, instance level, 
 17. If we use a variable for the case, it needs to be a compile time constants.
-18. StackOverflow,ArrayIndexOutOfBoundException thrown by JVM
+18. StackOverflow,ArrayIndexOutOfBoundException,NullPointerException, ArrayIndexOutOfBoundsException, ClassCastException,.. thrown by JVM
 19. A fully qualified means using the completed package details when acessing java class.
 20. We can have methods with same name and same scope in the class.
 21. if your passing int literal to the method, but method expecting short literal, compiler will fail, to pass this you need to cast.(short)10.
@@ -27,6 +34,9 @@
 24. Before going to pre/post increment check var type.
 25. int a[]=new int[3]; now 3 elements set to zero.
 26. all good s/w design will go for high cohesion and low coupling
+Cohesion refers to the degree to which the elements of a module/class belong together, it is suggested that the related code should be close to each other, so we should strive for high cohesion and bind all related code together as close as possible. It has to do with the elements within the module/class.
+Coupling refers to the degree to which the different modules/classes depend on each other, it is suggested that all modules should be independent as far as possible, that's why low coupling. It has to do with the elements among different modules/classes.
+
 27. -,+ are the unary operator
 28. while Overriding methods, we an't throw new or broader checked exceptions, but we can throw new or broader unchecked exception
 29. int x=10; static int y=x; will give compiletime error.static var can't access instance var value.
@@ -65,10 +75,14 @@
     
     No two of the case constant expressions associated with a switch statement may have the same value.
     The default label is optional and at most one default label may be associated with the same switch statement.
+
 42. Abstract methods are meants to be overrirdent in the subclass.
+
 43 . ##Boolean
     Boolean class has two constructors - Boolean(String) and Boolean(boolean)
     Boolean class has two static helper methods for creating booleans - parseBoolean and valueOf.
     Boolean.TRUE or Boolean.FALSE static members 
+
+44. In the no-arg constructor block,if you use this(); method, it will cause Recursive constructor invokation
     
     
