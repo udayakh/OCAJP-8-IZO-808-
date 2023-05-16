@@ -84,5 +84,52 @@ Coupling refers to the degree to which the different modules/classes depend on e
     Boolean.TRUE or Boolean.FALSE static members 
 
 44. In the no-arg constructor block,if you use this(); method, it will cause Recursive constructor invokation
+45. java keyword, can't be used as case labels
+46. boolean b=false;
+    int i=1;
+    do{
+    ++i;
+     }while(b =!b);
+    soup(i);
+     remember here: first iteration b is true(b=true(!false)) and second iteration be is false(b=false(!true))
+47. case full with variable declaration for loop statment, check if variable declared or not
+   ex: int j=0;
+   for(int i=10,j=2;J<i;i++,j++)//compiler error
+   
+48. break without a label, can occur only in a switch,while,do or for statements.
+49. LocalDate,LocalTime and LocalDateTime are immutable 
+50.  StringBuilder sb = new StringBuilder("SpaceStation");
+     sb.delete(5, 6).insert(5, " S").toString().toUpperCase();
+     System.out.println(sb);
+    sb - > "SpaceStation"
+    sb.delete(5, 6) -> "Spacetation"
+    sb.insert(5, " S") -> "Space Station"
+    sb.toString() -> Creates a new String object "Space Station"
+    "Space Station".toUpperCase() -> Creates another String object "SPACE STATION" but the String object is not referred and used
+51.  final int i1 = 1;
+            final Integer i2 = 1;
+            final String s1 = ":ONE";
+            
+            String str1 = i1 + s1;
+            String str2 = i2 + s1;
+            
+            System.out.println(str1 == "1:ONE");
+            System.out.println(str2 == "1:ONE");
+    Please note that Strings computed by concatenation at compile time, will be referred by String Pool during execution. Compile time String concatenation happens when both of the operands are compile time constants, such as literal, final variable etc.
+    Whereas, Strings computed by concatenation at run time (if the resultant expression is not constant expression) are newly created and therefore distinct
+    For the statement, String str1 = i1 + s1;, i1 is a final variable of int type and s1 is a final variable of String type. Hence, `i1 + s1` is a constant expression which is computed at compile-time and results in String literal "1:ONE".
+    This means during compilation, Java compiler translates the statement
+    String str1 = i1 + s1; to
+    String str1 = "1:ONE";
+    As "1:ONE" is a String literal, hence at runtime it will be referred by String Pool.
+    On the other hand, for the statement, String str2 = i2 + s1;, `i2 + s1` is not a constant expression because i2 is neither of primitive type nor of String type, hence it is computed at run-time and returns a non-pool String object "1:ONE".
+    As, str1 refers to String Pool object "1:ONE", hence `str1 == "1:ONE"` returns true, whereas str2 refers to non-Pool String object "1:ONE" and hence `str2 == "1:ONE"` returns false.
+52. Java doesn't allow to catch specific checked exceptions if these are not thrown by the statements inside try block.
+    catch(FileNotFoundException ex) {} causes  compilation error in this case as System.out.println(1); will never throw FileNotFoundException.
+    NOTE: Java allows to catch Exception type. catch(Exception ex) {} will never cause compilation error.
+    
+53.     
+
+
     
     
