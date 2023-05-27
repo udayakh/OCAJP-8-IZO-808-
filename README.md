@@ -128,8 +128,35 @@ Coupling refers to the degree to which the different modules/classes depend on e
     catch(FileNotFoundException ex) {} causes  compilation error in this case as System.out.println(1); will never throw FileNotFoundException.
     NOTE: Java allows to catch Exception type. catch(Exception ex) {} will never cause compilation error.
     
-53.     
-
+53. In the super class have static method, if extend that class created same method signature. 
+    Ex; A a = new B();a.test(); // it will call parent test method. Because static method is method hidden.
+54.  StringBuilder s1 = new StringBuilder("Java");
+                    String s2 = "Love";
+                    s1.append(s2);
+                    s1.substring(4);// it will create a new String Object, it will not modify s1 object
+                    int foundAt = s1.indexOf(s2);
+                    System.out.println(foundAt);//4
+55. minus operator used after string concatanation. it will cause compile time error
+psvm(Strings[] args){
+    int x=10,y=12;
+    soup("output is "+x-y);
+    }                     
+56. below sop is unreachable 
+String s[]={"a","b"};
+    for(String str:s){
+    continue;
+    soup(str);
+    }     
+57. specific converwions of primitive types
+ bye to short int long float double
+ short to init long float double
+  chat to int long float double
+ int to long float double
+ long to float double
+ float to double
+ 
+58
+ 
 
     
     
